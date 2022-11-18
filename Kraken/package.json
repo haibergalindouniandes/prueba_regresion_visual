@@ -1,0 +1,19 @@
+{
+  "name": "semana5",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "@faker-js/faker": "^7.6.0",
+    "kraken-node": "^1.0.24"
+  },
+  "devDependencies": {
+    "chai": "^4.3.7"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
