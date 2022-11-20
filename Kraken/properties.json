@@ -1,10 +1,10 @@
 {
-    "URL":"http://localhost:2368/ghost/#/signin",
-    "EMAIL":"h.galindos@uniandes.edu.co",
-    "PASSWORD":"Zl@ifer619",
+    "URL":"http://localhost:3002/ghost/#/site",
+    "EMAIL":"miso@miso.com",
+    "PASSWORD":"Miso123456",
     "TITLE_NEW_POST":"Usando Kraken para crear post",
     "CONTENT_NEW_POST":"Contenido del post a crear y publicar como escenario",
-    "OLDPASSWORD":"Jorge.2020",
-    "NEWPASSWORD":"Jorge.2022",
-    "URL_GENERAL_SETTINGS": "http://localhost:2368/ghost/#/settings/general"
+    "OLDPASSWORD":"Miso123456",
+    "NEWPASSWORD":"Miso123456",
+    "URL_GENERAL_SETTINGS": "http://localhost:3002/ghost/#/settings/general"
 }
