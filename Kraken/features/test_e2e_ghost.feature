@@ -1,9 +1,5 @@
 Feature: Automated GHOST tests
 
-Escenarios organizados
-
-Feature: Automated GHOST tests
-
   @user1 @web
   Scenario: Crear Post
     Given I navigate to page "<URL>"
