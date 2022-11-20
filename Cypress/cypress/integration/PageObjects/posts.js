@@ -13,11 +13,11 @@ class Posts {
     }
 
     buttonNewPost(){
-        return cy.get('button[class="gh-btn gh-btn-green"] span');
+        return cy.get('a[class="ember-view gh-btn gh-btn-green"]');
     }
 
     inputNewPostTitle(){
-        return cy.get('textarea[placeholder="Post title"]');
+        return cy.get('textarea[class="gh-editor-title ember-text-area gh-input ember-view"]');
     }
 
     inputNewPostContent(){
@@ -25,19 +25,19 @@ class Posts {
     }    
 
     buttonReviewPost(){
-        return cy.get('button[class="gh-btn gh-btn-editor gh-editor-preview-trigger"]');
+        return null;
     }
 
     buttonPublishPost() {
-        return cy.get('.right > .darkgrey > span');  
+        return cy.get('div[class="ember-view ember-basic-dropdown-trigger  gh-btn gh-btn-outline gh-publishmenu-trigger"]');  
     }
 
     buttonFinalReview(){
-        return cy.get('button[class="gh-btn gh-btn-black gh-btn-large"]');
+        return null;
     }
 
     buttonPublishPostNow(){
-        return cy.get('button[class="gh-btn gh-btn-large gh-btn-pulse ember-view"]');
+        return cy.get('button[class="gh-btn gh-btn-blue gh-publishmenu-button gh-btn-icon ember-view"]');
     }
 
     showNewPost(){
@@ -124,7 +124,7 @@ class Posts {
         Utils.delay();
         Utils.takeScreenshot(emailLogin, escenario, "Paso_"+Utils.pruebaID());
 
-        this.buttonReviewPost().click({force: true});
+        this.buttonReviewPost();
         Utils.delay();
         Utils.takeScreenshot(emailLogin, escenario, "Paso_"+Utils.pruebaID());
 
@@ -132,7 +132,7 @@ class Posts {
         Utils.delay();
         Utils.takeScreenshot(emailLogin, escenario, "Paso_"+Utils.pruebaID());
 
-        this.buttonFinalReview().click({force: true});
+        this.buttonFinalReview();
         Utils.delay();
         Utils.takeScreenshot(emailLogin, escenario, "Paso_"+Utils.pruebaID());
     
