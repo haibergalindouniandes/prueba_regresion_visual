@@ -5,19 +5,19 @@ module.exports = defineConfig({
   env: {
     appName: 'Testing Ghost With Cypress',
     delay: 1000,
-    emailLogin: 'h.galindos@uniandes.edu.co',
-    passwordLogin: 'Zl@ifer619',
-    dashboardPage: 'http://localhost:2368/ghost/#/dashboard',
-    pagesPage: 'http://localhost:2368/ghost/#/pages/121',
-    staffPage: 'http://localhost:2368/ghost/#/settings/staff',
-    settingsGeneralPage: 'http://localhost:2368/ghost/#/settings/general'
+    emailLogin: 'miso@miso.com',
+    passwordLogin: 'Miso123456',
+    dashboardPage: 'http://localhost:3002/ghost/#/site',
+    pagesPage: 'http://localhost:3002/ghost/#/pages/121',
+    staffPage: 'http://localhost:3002/ghost/#/staff',
+    settingsGeneralPage: 'http://localhost:3002/ghost/#/settings/general'
   },
   pageLoadTimeout: 300000,
   videosFolder: './results',
   e2e: {
     setupNodeEvents(on, config) { },
     //Url a vistar: 'http://localhost:2368/ghost/'
-    baseUrl: 'http://localhost:2368/ghost/',
+    baseUrl: 'http://localhost:3002/ghost/',
     specPattern: 'cypress/integration/**/*.spec.{js,jsx,ts,tsx}',
   },
 })
