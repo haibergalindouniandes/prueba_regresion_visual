@@ -3,9 +3,9 @@
     "browsers": [
         "chromium"
     ],
-    "firstPath": "C:\\Users\\haiber.galindo\\Downloads\\screenshots-kraken\\screenshots",
-    "secondPath": "C:\\Users\\haiber.galindo\\Downloads\\screenshots-cypress\\screenshots",
-    "valMinToPassedComparison" : 20,
+    "firstPath": "C:\\Users\\haiber.galindo\\Downloads\\comparative\\ghost_3_42",
+    "secondPath": "C:\\Users\\haiber.galindo\\Downloads\\comparative\\ghost_5_22",
+    "valMinToPassedComparison" : 10,
     "options": {
         "output": {
             "errorColor": {

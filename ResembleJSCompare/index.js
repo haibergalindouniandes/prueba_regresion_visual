@@ -34,6 +34,9 @@ async function executeTest() {
     fs.writeFileSync(`./results/${datetime}/report.html`, reporter.createReport(dataReport));
     fs.copyFileSync('./index.css', `./results/${datetime}/index.css`);
     fs.copyFileSync('./config.js', `./results/${datetime}/config.js`);
+    fs.copyFileSync('./node_modules/bootstrap/dist/css/bootstrap.min.css', `./results/${datetime}/bootstrap.min.css`);
+    fs.copyFileSync('./node_modules/jquery/dist/jquery.min.js', `./results/${datetime}/jquery.min.js`);
+    fs.copyFileSync('./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js', `./results/${datetime}/bootstrap.bundle.min.js`);
 
     console.log('------------------------------------------------------------------------------------')
     console.log(`Ejecución finalizada. Por favor verfique el reporte generado "${resultsDir}/report.html"`)

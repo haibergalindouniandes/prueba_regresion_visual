@@ -11,10 +11,10 @@ function createReport(dataResult) {
     <head>
       <meta charset="utf-8">
       <title>Reporte pruebas de regresión</title>
-      <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.min.css">
+      <link rel="stylesheet" href="./bootstrap.min.css">
       <link rel="stylesheet" href="./index.css">
-      <script src="../../node_modules/jquery/dist/jquery.min.js"></script>
-      <script src="../../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+      <script src="./jquery.min.js"></script>
+      <script src="./bootstrap.bundle.min.js"></script>
       <script src='https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.1.4/Chart.bundle.min.js'></script>
       <script>
         $(document).ready(function () {
