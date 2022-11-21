@@ -29,16 +29,16 @@ Para utilizar hacer uso este proyecto, se deben seguir los siguientes pasos:
 
 
 - Configure las propiedades de la aplicación: La carpeta raíz del repositorio contiene el archivo `properties.json`, el cual brinda los siguientes parámetros que se pueden modificar: 
+
 ![image](https://drive.google.com/uc?export=view&id=1alTh-q_rF2rky_859SCieX6eBsIo4Tpk)
 
-<br>* `firstPath:` Ruta de las imágenes iniciales. Ej: `C:\\Users\\haiber.galindo\\Downloads\\screenshots-kraken\\screenshots`.
-<br>* `secondPath:` Ruta de las imágenes a comparar. Ej: `C:\\Users\\haiber.galindo\\Downloads\\screenshots-cypress\\screenshots`.
-<br>* `valMinToPassedComparison`: Oráculo máximo establecido para que la comparación de las imágenes sea exitosa. Ej: `20`, que representaría que toda comparación que supere este oráculo tendrá un resultado fallido.
+<br>* **`firstPath:`** Ruta de las imágenes iniciales. Ej: `C:\\Users\\haiber.galindo\\Downloads\\screenshots-kraken\\screenshots`.
+<br>* **`secondPath:`** Ruta de las imágenes a comparar. Ej: `C:\\Users\\haiber.galindo\\Downloads\\screenshots-cypress\\screenshots`.
+<br>* **`valMinToPassedComparison`:** Oráculo máximo establecido para que la comparación de las imágenes sea exitosa. Ej: `20`, que representaría que toda comparación que supere este oráculo tendrá un resultado fallido.
 
 Algo que se debe tener muy en cuenta es la estructura de las carpetas y que el número de imágenes contenida en cada una, debe ser y llamarse iguales, de lo contrario se devolverá un error por la consola de la terminal donde se lanza la ejecución del proyecto.
 
 ![image](https://drive.google.com/uc?export=view&id=15WslfxoG-vHIcUZnXyImO2m209NVB66m)
-
 
 ## Ejecución
 Una vez realizada la configuración del archivo `config.json` para lanzar la ejecucón de las pruebas, a través de la terminal ejecute el siguiente comando: `node index.js` 
@@ -46,8 +46,8 @@ Una vez realizada la configuración del archivo `config.json` para lanzar la eje
 ## Resultados
 Cuando finalice la ejecución de la prueba, se generará en la carpeta de `./reports/` una carpeta con la fecha y hora de ejecución `./reports/2022-11-20T15.45.37.160Z` y dentro de esta se encontrará el archivo `report.html` que tendrá el reporte de la comparación visual realizada con base a las imágenes de las rutas indicadas en el archivo `config.json`.
 El archivo `report.html` se debe abrir con el navegador de su preferencia y se visualizara de la siguiente forma:
-![image](https://drive.google.com/uc?export=view&id=1NOOz8GfXEQWJC7FzHTOrAicgDcTCqEWs)
 
+![image](https://drive.google.com/uc?export=view&id=1NOOz8GfXEQWJC7FzHTOrAicgDcTCqEWs)
 
 ## Ventajas de utilizar esta herramienta
 - Su ejecución es rápida.
