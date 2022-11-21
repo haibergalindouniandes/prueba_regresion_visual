@@ -8,7 +8,8 @@
 | Edgar Ariel Salamanca Camargo | ea.salamanca@uniandes.edu.co |
 
 # Pruebas de regresión visual
-Este proyecto permite realizar pruebas de regresión visual entre dos versiones diferentes de la aplicación bajo pruebas Ghost (https://ghost.org/), haciendo uso de las APIs de Automatización Cypress (https://www.cypress.io/) y Kraken (https://thesoftwaredesignlab.github.io/KrakenMobile/) para la ejecución de las pruebas automatizadas donde se recolectarán los screenshots, y posteriormente se ralizará la comparación de las imágenes con ResembleJS (https://rsmbl.github.io/Resemble.js/) para detectar los cambios visuales entre versiones. A continuación, se explica el detalle: 
+Este proyecto permite realizar pruebas de regresión visual entre dos versiones diferentes de la aplicación bajo pruebas Ghost (https://ghost.org/), haciendo uso de las APIs de Automatización Cypress (https://www.cypress.io/) y Kraken (https://thesoftwaredesignlab.github.io/KrakenMobile/) para la ejecución de las pruebas automatizadas, donde se recolectarán los screenshots y posteriormente se realizará la comparación de estos  a través del uso de ResembleJS (https://rsmbl.github.io/Resemble.js/), con la finalidad de detectar los cambios visuales entre versiones. 
+A continuación, se explica el detalle: 
 
 ## Versiones de Ghost utilizadas para las pruebas de regresión visual
 | Versiones de Ghost | 
@@ -63,20 +64,17 @@ La estructura interna de la aplicación a nivel de carpetas y su finalidad es la
 
 ## Ejecución de las pruebas de regresión visual
 Ya que el objetivo es poder realizar la comparación de screenshots tomandos en la ejecución de las diferentes pruebas automatizadas de extremo a extremo asociadas a los 10 escenarios de prueba mencionados anteriormente, se debe seguir los siguientes pasos:
--	En primera instancia se debe crear una carpeta en donde se centralizarán los diferentes proyectos (test_e2e_cypress_ghost, test_e2e_kraken_ghost y prueba_regresion_visual). <br>* **Url test_e2e_cypress_ghost:** https://github.com/haibergalindouniandes/test_e2e_cypress_ghost.git <br>*  **Url de test_e2e_kraken_ghost:** https://github.com/haibergalindouniandes/test_e2e_kraken_ghost.git <br>* **Url de prueba_regresion_visual:** https://github.com/haibergalindouniandes/prueba_regresion_visual.git
+-	En primera instancia se debe crear una carpeta en donde se centralizarán los diferentes proyectos (test_e2e_cypress_ghost, test_e2e_kraken_ghost y prueba_regresion_visual). Por ejemplo, pruebas `PruebasAutomatizadas`. <br>* **Url test_e2e_cypress_ghost:** https://github.com/haibergalindouniandes/test_e2e_cypress_ghost.git <br>* **Url de test_e2e_kraken_ghost:** https://github.com/haibergalindouniandes/test_e2e_kraken_ghost.git <br>* **Url de prueba_regresion_visual:** https://github.com/haibergalindouniandes/prueba_regresion_visual.git
 
-
-![image](https://drive.google.com/uc?export=view&id=1pwDhGK1ZHnc_HW-X_LIN0fozzMoBiAAa)
-
-## Ejecución de las pruebas de regresión visual
-Ya que el objetivo es poder realizar la comparación de screenshots tomandos en la ejecución de las diferentes pruebas automatizadas de extremo a extremo asociadas a los 10 escenarios de prueba mencionados anteriormente, se debe seguir los siguientes pasos:
--	En primera instancia se debe crear una carpeta en donde se centralizarán los diferentes proyectos (test_e2e_cypress_ghost, test_e2e_kraken_ghost y prueba_regresion_visual). Por ejemplo pruebas `PruebasAutomatizadas`. <br>* **Url test_e2e_cypress_ghost:** https://github.com/haibergalindouniandes/test_e2e_cypress_ghost.git <br>* **Url de test_e2e_kraken_ghost:** https://github.com/haibergalindouniandes/test_e2e_kraken_ghost.git <br>* **Url de prueba_regresion_visual:** https://github.com/haibergalindouniandes/prueba_regresion_visual.git
--	 Ejecutar la suite de pruebas automatizadas de extremo a extremo implementadas con la herramienta Cypress. Para esto seguir el paso a paso descrito en el archivo REDME.md del proyecto `./test_e2e_cypress_ghost/README.md`.
+-	 Ejecutar la suite de pruebas automatizadas de extremo a extremo implementadas con la herramienta Cypress. Se debe seguir el paso a paso descrito en el archivo `REDME.md` del proyecto `./test_e2e_cypress_ghost/README.md`.
 	 
--	Ejecutar la suite de pruebas automatizadas de extremo a extremo implementadas con la herramienta Kraken. Para esto seguir el paso a paso descrito en el archivo REDME.md del proyecto `./test_e2e_kraken_ghost/README.md`.
+-	Ejecutar la suite de pruebas automatizadas de extremo a extremo implementadas con la herramienta Kraken. Para esto seguir el paso a paso descrito en el archivo `REDME.md` del proyecto `./test_e2e_kraken_ghost/README.md`.
 	
--	Ejecutar la suite de pruebas automatizadas de extremo a extremo de los 5 escenarios nuevos implementados con Kraken de la versión 3.42 de Ghost. Para esto seguir el paso a paso descrito en el archivo REDME.md del proyecto `./prueba_regresion_visual/Kraken/README.md`.
+-	Ejecutar la suite de pruebas automatizadas de extremo a extremo de los 5 escenarios nuevos implementados con Kraken de la versión 3.42 de Ghost. Se debe seguir el paso a paso descrito en el archivo `REDME.md` del proyecto `./prueba_regresion_visual/Kraken/README.md`.
 
--	Ejecutar la suite de pruebas automatizadas de extremo a extremo de los 5 escenarios nuevos implementados con Cypress de la versión 3.42 de Ghost. Para esto seguir el paso a paso descrito en el archivo REDME.md del proyecto `./prueba_regresion_visual/Cypress/README.md`.
+-	Ejecutar la suite de pruebas automatizadas de extremo a extremo de los 5 escenarios nuevos implementados con Cypress de la versión 3.42 de Ghost. Se debe seguir el paso a paso descrito en el archivo `REDME.md` del proyecto `./prueba_regresion_visual/Cypress/README.md`.
 
--	Ejecutar las pruebas de regresión visual implementando el proyecto ResembleJSCompare, se deben relacionar las carpetas con los screenshots tomados según la estructura requerida por el proyecto. Para esto seguir el paso a paso descrito en el archivo REDME.md del proyecto `./prueba_regresion_visual/ResembleJSCompare/README.md`.
+-	Una vez obtenidos los screenshots de las diferentes versiones de la aplicación Ghost (versiones 3.42 y 5.22), se debe ejecutar las pruebas de regresión visual implementando el proyecto ResembleJSCompare, en donde se relacionarán las rutas de las carpetas según la estructura requerida por el proyecto. Seguir el paso a paso descrito en el archivo `REDME.md` del proyecto `./prueba_regresion_visual/ResembleJSCompare/README.md`.
+
+
+![image](https://drive.google.com/uc?export=view&id=1DT3rACYvLdTYAszqJEI6TAHEh0ZrVYRi)
