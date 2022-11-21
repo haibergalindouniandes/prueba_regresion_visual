@@ -8,8 +8,7 @@
 | Edgar Ariel Salamanca Camargo | ea.salamanca@uniandes.edu.co |
 
 # Pruebas de regresión visual
-Este proyecto permite realizar pruebas de regresión visual entre dos versiones diferentes de la aplicación bajo pruebas Ghost (https://ghost.org/), haciendo uso de las APIs de Automatización Cypress (https://www.cypress.io/) y Kraken (https://thesoftwaredesignlab.github.io/KrakenMobile/). A continuación, se explica el detalle: 
-A continuación se explica el detalle: 
+Este proyecto permite realizar pruebas de regresión visual entre dos versiones diferentes de la aplicación bajo pruebas Ghost (https://ghost.org/), haciendo uso de las APIs de Automatización Cypress (https://www.cypress.io/) y Kraken (https://thesoftwaredesignlab.github.io/KrakenMobile/) para la ejecución de las pruebas automatizadas donde se recolectarán los screenshots, y posteriormente se ralizará la comparación de las imágenes con ResembleJS (https://rsmbl.github.io/Resemble.js/) para detectar los cambios visuales entre versiones. A continuación, se explica el detalle: 
 
 ## Versiones de Ghost utilizadas para las pruebas de regresión visual
 | Versiones de Ghost | 
