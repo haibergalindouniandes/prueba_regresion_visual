@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Resembler JS Report</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="./index.css">
+</head>
+<!---->
+
+<body>
+  <div id="root" class="container-fluids">
+    <div class="container-fluids header-margin " id="header-page">
+      <h1 class="text-center">Reporte de comparacion</h1>
+    </div>
+    <div class="container-fluids body-margin" id="body-page">
+      <div class="row">
+        <div class="col-4">
+          <div class="container-fluids">
+            <h3>Antes</h3>
+            <img src="./images/reports1/framework01_signin.png" class="img-size" alt="Responsive image">
+          </div>
+        </div>
+        <div class="col-4">
+          <div class="container-fluids">
+            <h3>Despues</h3>
+            <img src="./images/reports1/framework01_signin.png" class="img-size" alt="Responsive image">
+          </div>
+        </div>
+        <div class="col-4">
+          <div class="container-fluids">
+            <h3>Comparacion</h3>
+            <img src="./results/2022-11-17T21.19.47.641Z/compare-undefined.png" class="img-size" alt="Responsive image">
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-4">
+          <div class="container-fluids">
+            <h3>Antes</h3>
+            <img src="./images/reports1/framework02_dashboard.png" class="img-size" alt="Responsive image">
+          </div>
+        </div>
+        <div class="col-4">
+          <div class="container-fluids">
+            <h3>Despues</h3>
+            <img src="./images/reports1/framework02_dashboard.png" class="img-size" alt="Responsive image">
+          </div>
+        </div>
+        <div class="col-4">
+          <div class="container-fluids">
+            <h3>Comparacion</h3>
+            <img src="./results/2022-11-17T21.19.47.641Z/compare-undefined.png" class="img-size" alt="Responsive image">
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-4">
+          <div class="container-fluids">
+            <h3>Antes</h3>
+            <img src="./images/reports1/framework03_post.png" class="img-size" alt="Responsive image">
+          </div>
+        </div>
+        <div class="col-4">
+          <div class="container-fluids">
+            <h3>Despues</h3>
+            <img src="./images/reports1/framework03_post.png" class="img-size" alt="Responsive image">
+          </div>
+        </div>
+        <div class="col-4">
+          <div class="container-fluids">
+            <h3>Comparacion</h3>
+            <img src="./results/2022-11-17T21.19.47.641Z/compare-undefined.png" class="img-size" alt="Responsive image">
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-4">
+          <div class="container-fluids">
+            <h3>Antes</h3>
+            <img src="./images/reports1/framework04_pages.png" class="img-size" alt="Responsive image">
+          </div>
+        </div>
+        <div class="col-4">
+          <div class="container-fluids">
+            <h3>Despues</h3>
+            <img src="./images/reports1/framework04_pages.png" class="img-size" alt="Responsive image">
+          </div>
+        </div>
+        <div class="col-4">
+          <div class="container-fluids">
+            <h3>Comparacion</h3>
+            <img src="./results/2022-11-17T21.19.47.641Z/compare-undefined.png" class="img-size" alt="Responsive image">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!---->
+  <a href="#" id="pop">
+    <img id="imageresource" src="http:patyshibuya.com.br/wp-content/uploads/2014/04/04.jpg"
+      style="width: 400px; height: 264px;">
+    Click to Enlarge
+  </a>
+
+  <!-- Creates the bootstrap modal where the image will appear -->
+  <div class="modal fade" id="imagemodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span
+              class="sr-only">Close</span></button>
+          <h4 class="modal-title" id="myModalLabel">Image preview</h4>
+        </div>
+        <div class="modal-body">
+          <img src="" id="imagepreview" style="width: 400px; height: 264px;">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!---->
+
+
+  <script src="./config.js"></script>
+  <script src="../../node_modules/jquery/dist/jquery.min.js"></script>
+  <script src="../../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+<!---->
+
+</html>
