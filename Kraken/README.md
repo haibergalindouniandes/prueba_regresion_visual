@@ -42,8 +42,7 @@ A continuación, se presenta la estructura interna de la aplicación a nivel de 
 Para utilizar hacer uso del test de pruebas de la aplicación Ghost, se deben seguir los siguientes pasos:
 - Obtenga el código fuente del repositorio: haga clic en Descargar como Zip y descomprima la carpeta en su máquina o clone el repositorio en su ambiente local.
 - Kraken requiere Ruby 2.20 o superior, pero se recomienda usar la versión 2.3. 
-- Se hace uso calabash-android como para su ejecucion.
-, puede verificar sus requisitos previos en este enlace. La instalación y administración de una gema se realiza a través del comando gem. Para instalar la gema de Kraken, ejecute el siguiente comando.
+- Se hace uso calabash-android (https://github.com/calabash/calabash-android)
 - Instalar los módulos requeridos: Desde una terminal se ejecuta el comando `gem install kraken-mobile` en la carpeta raíz del proyecto; esto instalara los módulos de Kraken y otras dependencias necesarias para el correcto funcionamiento del proyecto, como lo es el módulo de faker (https://www.npmjs.com/package/faker), Cucumber (https://cucumber.io/), Chai (https://www.chaijs.com/), Gherkin ( https://npm.io/search/keyword:gherkin), entre otras.<br>Para más información acerca del paso a paso para la instalación de Kraken dirijase a la página oficial de Kraken https://thesoftwaredesignlab.github.io/KrakenMobile/.
 
 
