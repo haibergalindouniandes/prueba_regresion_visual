@@ -36,7 +36,7 @@ El proyecto cuenta con una suite de pruebas principal que tiene 10 escenarios de
 | PA_03 |  Crear página |   Escenario que realiza la creación de una página con información aleatoria.   |
 | PA_04 |  Editar información de mi perfil|  Escenario que realiza la modificación de información del perfil con que se ingrese. Esta información se genera de forma aleatoria.   |
 | PA_05 |  Eliminar página|   Escenario que realiza el borrado de la primera página que se encuentre en el listado de páginas.      |
-| PA_06 |  Invitar personasEscenario que realiza el envió de la invitación a unirse a un correo aleatorio.      |
+| PA_06 |  Invitar personas |Escenario que realiza el envió de la invitación a unirse a un correo aleatorio.      |
 | PA_07 |  Modificar página| Escenario que realiza la modificación de una página existente con información aleatoria.     |
 | PA_08 |  Modificar post | Escenario que realiza la modificación de un post existente con información aleatoria.    |
 | PA_09 |  Eliminar post | Escenario que realiza el borrado del primer post que se encuentre en el listado de posts.   |
