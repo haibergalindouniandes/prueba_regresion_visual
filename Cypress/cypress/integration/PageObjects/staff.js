@@ -39,8 +39,8 @@ class Staff {
     }
 
     selectfisrtActiveUser() {
-        //cy.get('a[class="ember-view"]').first().click({ force: true });
-        cy.get('div[class="apps-grid-cell tooltip-centered"] a[class="ember-view"]').click({ force: true });
+        //cy.get('a[class="ember-view"]').first().click({ force: true });//a[@id='ember131']//article[@class='apps-card-app']
+        cy.get('a[class="ember-view"] article[class="apps-card-app"]').first().click({ force: true });
     }    
     
     setOldPasword(oldPass) {

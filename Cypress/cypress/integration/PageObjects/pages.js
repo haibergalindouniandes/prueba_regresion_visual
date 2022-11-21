@@ -65,11 +65,13 @@ class Pages {
     }
 
     buttonEdit() {
-        return cy.get('a[class="ember-view permalink gh-list-data gh-post-list-button"]').first();  
+        return cy.get('a[class="ember-view permalink gh-list-data gh-post-list-featured"]').first();  
     }
 
     buttonUpdate() {
-        return cy.get('button[class="gh-btn gh-btn-editor gh-editor-save-trigger green ember-view"]');  
+        cy.get('div[class="ember-view ember-basic-dropdown-trigger  gh-btn gh-btn-outline gh-publishmenu-trigger"]').click({ force: true });;  
+        Utils.delay();
+        return this.buttonPublishNow();  
     }
 
     inputToSearch(){

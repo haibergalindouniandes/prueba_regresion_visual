@@ -45,7 +45,7 @@ class Posts {
     }
 
     showPostSettingExcerpt(){
-        return cy.get('#custom-excerpt');
+        return cy.get('#custom-excerpt');//textarea[@id='custom-excerpt']
     }
 
     showPostSettingCheckbox(){
@@ -53,15 +53,17 @@ class Posts {
     }
     
     firstPost() {
-        return cy.get('a[class="ember-view permalink gh-list-data gh-post-list-button"').first();
+        return cy.get('a[class="ember-view permalink gh-list-data gh-post-list-title"]').first();
     }
 
     buttonEditPost() {
-        return cy.get('a[class="ember-view gh-post-list-cta edit"]');
+        cy.get('div[class="ember-view ember-basic-dropdown-trigger  gh-btn gh-btn-outline gh-publishmenu-trigger"]').click({ force: true });
+        Utils.delay();
+        return this.buttonPublishPostNow();
     }
 
     buttonSettingsPost() {
-        return cy.get('button[class="settings-menu-toggle gh-btn gh-btn-editor gh-btn-icon icon-only gh-btn-action-icon"]');
+        return cy.get('button[class="post-settings"]');
     }
 
     buttonDeletePost() {
@@ -100,7 +102,6 @@ class Posts {
         Utils.takeScreenshot(emailLogin, escenario, "Paso_"+Utils.pruebaID());
         Utils.delay();
 
-        this.confirmButtonDeletePost().click({ force: true });
         Utils.delay(2000);
         Utils.takeScreenshot(emailLogin, escenario, "Paso_"+Utils.pruebaID());       
 

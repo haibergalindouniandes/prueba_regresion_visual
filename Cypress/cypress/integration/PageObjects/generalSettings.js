@@ -1,6 +1,4 @@
-import Page from "./page";
 import { Utils } from '../../support/utils';
-const page = new Page();
 class GeneralSettings {
 
     instance = 0;
@@ -10,7 +8,7 @@ class GeneralSettings {
     }
 
     expandablesBlock() {
-        return cy.get('div.gh-expandable-block div.gh-expandable-header');
+        return cy.get('div[class="gh-setting flex-column"] span');
     }
 
     clickSpecificExpandablesBlock(elementToSearch) {
@@ -36,23 +34,31 @@ class GeneralSettings {
     }
 
     open() {
-        page.navigate('#/settings/general');
+        Utils.navigate('#/settings/general');        
     }
 
-    editTimeCardTwiter(title, description) {
+    editTimeCardTwiter(title, description, emailLogin, escenario) {
         this.open();
-        Utils.takeScreenshot(this.instance, this.constructor.name);
+        Utils.delay();
+        Utils.takeScreenshot(emailLogin, escenario, "Paso_"+Utils.pruebaID());
+        
         this.clickSpecificExpandablesBlock('Twitter card');
         this.twitterTitle().clear().type(title, { force: true });
         this.twitterDescription().clear().type(description, { force: true });
-        Utils.takeScreenshot(this.instance, this.constructor.name);
+        Utils.delay();
+        Utils.takeScreenshot(emailLogin, escenario, "Paso_"+Utils.pruebaID());
+        
         this.submitSaveButton().click({ force: true });
-        Utils.takeScreenshot(this.instance, this.constructor.name);
+        Utils.delay(1000);
+        Utils.takeScreenshot(emailLogin, escenario, "Paso_"+Utils.pruebaID());
+        
         this.submitSaveButton();
         Utils.delay(1000);
         cy.reload()
         Utils.delay(3000);
         this.clickSpecificExpandablesBlock('Twitter card');
+        Utils.delay(1000);
+        Utils.takeScreenshot(emailLogin, escenario, "Paso_"+Utils.pruebaID());
     }
 }
 export default GeneralSettings;
