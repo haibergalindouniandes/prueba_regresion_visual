@@ -1,16 +1,19 @@
-# Pruebas de regresión visual
-Este proyecto permite realizar pruebas de regresión visual entre dos versiones diferentes de la aplicación bajo pruebas Ghost (https://ghost.org/), haciendo uso de las APIs de Automatización Cypress (https://www.cypress.io/) y Kraken (https://thesoftwaredesignlab.github.io/KrakenMobile/). A continuación, se explica el detalle: 
+# Integrantes
 
-## Versiones de Ghost utilizadas para las pruebas de regresión visual
-| Versiones de Ghost | 
-| ----- |
-|3.42|
-|5.22|
+| Nombre | email |
+| --------- | --------- |
+| Haiber Humberto Galindo Sanchez | h.galindos@uniandes.edu.co |
+| Jhon Fredy Guzmán Caicedo | Jf.guzmanc1@uniandes.edu.co |
+| Jorge Mario Carrillo Riveros | jm.carrillo@uniandes.edu.co |
+| Edgar Ariel Salamanca Camargo | ea.salamanca@uniandes.edu.co |
 
-
+# Pruebas Automatizadas De Extremo A Extremo Con Cypress - Aplicación Ghost (Version 5.22.10)
+Este proyecto permite realizar pruebas automatizadas de extremo a extremo de la aplicación Ghost, haciendo uso del API de Automatización Cypress (https://www.cypress.io/). A continuación se explica el detalle: 
 
 ## Escenarios de prueba 
-El proyecto cuenta con una suite de pruebas principal que tiene 5 escenarios de prueba automatizadas, los cuales se detallan a continuación:
+El proyecto cuenta con una suite de pruebas principal que tiene 20 escenarios de prueba automatizadas, los cuales se detallan a continuación:
+
+### Funcionalidades 
 
 | Funcionalidades a probar | 
 | ----- |
@@ -19,6 +22,8 @@ El proyecto cuenta con una suite de pruebas principal que tiene 5 escenarios de 
 | Posts |
 | Staff |
 | Login |
+
+### Escenarios 
 
 | Identificador | Escenario | Descripción |
 | ----- | ----------- | ----------- |
@@ -29,29 +34,10 @@ El proyecto cuenta con una suite de pruebas principal que tiene 5 escenarios de 
 | PA_05 |  Eliminar página|   Escenario que realiza el borrado de la primera página que se encuentre en el listado de páginas.      |
 
 
-## Prerrequisitos para ejecutar las pruebas 
-Dado que el objetivo del proyecto es realizar las pruebas de regresión visuales de las versiones anteriormente mencionadas, se hace necesario contar en primera instancia con la instalación de aplicación, para esto se recomiendo realizar las instalaciones a través de Docker (https://www.docker.com/). Se comparten los siguientes enlaces para este fin:
--	Instalación de Docker en Windows:  https://docs.docker.com/desktop/install/windows-install/
--	Instalación de Docker en Linux:  	https://docs.docker.com/engine/install/ubuntu/
--	Instalación de Docker en Mac:  	https://docs.docker.com/desktop/install/mac-install/
-
-## Instalación de las diferentes versiones de Ghost con Docker
-Para realizar la instalación de las versiones de Ghost con Docker, se comparte el siguiente enlace https://ghost.org/docs/install/docker/ que contiene información de cómo se realiza este proceso.
-Ejecutar los siguientes comandos en la terminal de Docker: 
-  -	Instalación de Ghost 3.42:  `docker run -d -e url=http://localhost:3001 -p 3001:2368 --name ghost_3.42 ghost:3.42`
-  -	Instalación de Ghost 5.22:  `docker run -d -e url=http://localhost:3001 -p 3001:2369 --name ghost_5.22 ghost:5.22`
-
-## Estructura general de carpetas del proyecto
+## Estructura de carpetas
 La estructura interna de la aplicación a nivel de carpetas y su finalidad es la siguiente:
 
-![image](https://drive.google.com/uc?export=view&id=1ASKvfHyaxXRTh_HhiHkZuo7zpAwk7R10)
-
-![image](https://drive.google.com/uc?export=view&id=169dirgjKP5sTfUcJAa0_ahw-JuTZznJF)
-
-![image](https://drive.google.com/uc?export=view&id=1ASKvfHyaxXRTh_HhiHkZuo7zpAwk7R10)
-
-
-https://drive.google.com/file/d/1ASKvfHyaxXRTh_HhiHkZuo7zpAwk7R10/view?usp=sharing
+![estructura_cypress](https://user-images.githubusercontent.com/111403006/202925080-6934f77b-ef1a-4c76-af9b-6cddbe4651e7.png)
 
 **cypress:** Carpeta contenedora de las funcionalidades de Cypress.
 -	**fixtures:** Donde se guarda los archivos que se usaran en los mocks, pueden ser imágenes, videos, txt etc.
@@ -66,22 +52,22 @@ https://drive.google.com/file/d/1ASKvfHyaxXRTh_HhiHkZuo7zpAwk7R10/view?usp=shari
 ## Instalación y configuración
 Para utilizar hacer uso del test de pruebas de la aplicación Ghost, se deben seguir los siguientes pasos:
 - Obtenga el código fuente del repositorio: haga clic en Descargar como Zip y descomprima la carpeta en su máquina o clone el repositorio en su ambiente local.
-- Instalar los módulos requeridos: Usando Node Package Manager (https://www.npmjs.com/), run `npm install` en la carpeta raíz; esto instalara los módulos de Cypress CLI y otras dependencias necesarias para el correcto funcionamiento del proyecto, como lo es el módulo de faker (https://www.npmjs.com/package/faker). En caso de que ya tenga instalado Cypress, es mejor evitar instalarlo nuevamente en esta carpeta; puede realizar la instalación de dependencias de forma independiente, para esto ejecuta los comandos: `npm install faker`.
-- Configure las propiedades de la aplicación: La carpeta raíz del repositorio contiene el archivo `properties.config.js`, el cual brinda los siguientes parámetros que se pueden modificar: 
-<br>* `appName:` Nombre de la aplicación a probar. Ej: Monkey LosEstudiantes.com.
-<br>* `baseUrl:` Url de la aplicación a pruebas. Ej: `http://localhost:2368/ghost/`.
-<br>* `delay:` Tiempo de retraso entre ejecuciones. Este valor debe ser en milisegundos. Ej: `1000`.
-<br>* `emailLogin:` Correo electrónico de la cuenta administrador de la aplicación. Ej: `jose_2345@pruebas.com.co`.
-<br>* `passwordLogin:` Contraseña de la cuenta administrador de la aplicación. Ej: `jose@2345`.
-<br>* `dashboardPage:` Url de la página del dashboard de la aplicación. Ej: `http://su_dominio/ghost/#/dashboard`.
-<br>* `staffPage:` Url de la página de staff de la aplicación. Ej: `http://su_dominio/ghost/#/settings/staff`.
-<br>* `settingsGeneralPage:` Url de la página de configuraciones generales de la aplicación. Ej: `http://su_dominio/ghost/#/settings/general`.
+- Instalar los módulos requeridos: Usando [Node Package Manager](https://www.npmjs.com/), run `npm install` en la carpeta raíz; esto instalara los módulos de Cypress CLI y otras dependencias necesarias para el correcto funcionamiento del proyecto, como lo es el módulo de [faker](https://www.npmjs.com/package/faker). En caso de que ya tenga instalado Cypress, es mejor evitar instalarlo nuevamente en esta carpeta; puede realizar la instalación de dependencias de forma independiente, para esto ejecuta los comandos: `npm install faker`.
+- Configure las propiedades de la aplicación: La carpeta support contiene el archivo `utils.js`, el cual brinda los siguientes parámetros que se pueden modificar: 
+![configuracion](https://user-images.githubusercontent.com/111403006/202923217-749b4cb7-9a46-4934-babe-0a0621aa0309.png)
+<br>* Modifique los puertos en los parametros **siteUrl**, **Url**, **dashboardPage**, **staffPage** y **memberPage**, de acuerdo al puerto que Ghost esta usando en su maquina.
+<br>* Modifique los parametros **emaiLogin**, **passwordLogin** de acuerdo a los valores que establecio para crear su cuenta de Ghost.
+<br>* Modifique el parametro **newwordLogin** con una contrasena valida que cumpla los requirimientos de Ghost, para que la contrasena actual pueda ser actualizada por la nueva contrasena. Para este ejercicio puede establecer el parametro **newwordLogin** igual que su actual contrasena (**passwordLogin**) 
+
+
 
 ## Ejecución
-- Una vez realizada la configuración del archivo `properties.config.js` para lanzar la ejecucón de las pruebas, a través de la terminal ejecute el siguiente comando: `./node_modules/.bin/cypress run --config-file ./properties.config.js`: 
+- Una vez realizada la configuración del archivo `utils.js` para lanzar la ejecucón de las pruebas, a través de la terminal ejecute el siguiente comando: `./node_modules/.bin/cypress run. 
+- Si requiere lanzar la ejecucion de una prueba en particular ejecute el siguiente comando:
+`./node_modules/.bin/cypress run --spec "ruta<step>", por ejemplo: ./node_modules/.bin/cypress run --spec "cypress/integration/step-definitions/13_modifyPage.spec.js"
 
 ## Resultados
-Cuando finalice la ejecución de la prueba, se generará en la carpeta de `./results` con un video de la ejecución en un navegador y adicional a esto se genera una carpeta en la ruta `./cypress/screenshots` con los screenshots tomados durante la ejecución de la prueba.
+Cuando finalice la ejecución de la prueba, se generará en la carpeta `videos` un video de la ejecución en un navegador y adicional a esto se genera en la carpeta `screenshots` los pantallazos tomados durante la ejecución de la prueba.
 
 ## Ventajas de utilizar esta herramienta
 
