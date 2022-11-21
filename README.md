@@ -36,6 +36,11 @@ El proyecto cuenta con una suite de pruebas principal que tiene 10 escenarios de
 | PA_03 |  Crear página |   Escenario que realiza la creación de una página con información aleatoria.   |
 | PA_04 |  Editar información de mi perfil|  Escenario que realiza la modificación de información del perfil con que se ingrese. Esta información se genera de forma aleatoria.   |
 | PA_05 |  Eliminar página|   Escenario que realiza el borrado de la primera página que se encuentre en el listado de páginas.      |
+| PA_06 |  Invitar personasEscenario que realiza el envió de la invitación a unirse a un correo aleatorio.      |
+| PA_07 |  Modificar página| Escenario que realiza la modificación de una página existente con información aleatoria.     |
+| PA_08 |  Modificar post | Escenario que realiza la modificación de un post existente con información aleatoria.    |
+| PA_09 |  Eliminar post | Escenario que realiza el borrado del primer post que se encuentre en el listado de posts.   |
+| PA_10 |  Cambiar password | Escenario que realiza el cambio de password del usuario administrador de la aplicación.   |
 
 
 ## Prerrequisitos para ejecutar las pruebas 
@@ -48,7 +53,7 @@ Dado que el objetivo del proyecto es realizar las pruebas de regresión visuales
 ## Instalación de las diferentes versiones de Ghost con Docker
 Para realizar la instalación de las versiones de Ghost con Docker, se comparte el siguiente enlace https://ghost.org/docs/install/docker/ que contiene información de cómo se realiza este proceso.
 Ejecutar los siguientes comandos en la terminal de Docker: 
-  -	Instalación de Ghost 3.42:  docker run -d -e url=http://localhost:3001 -p 3001:2368 --name ghost_3.42 ghost:3.42
+  -	Instalación de Ghost 3.42:  docker run -d -e url=http://localhost:3002 -p 3002:2368 --name ghost_3.42 ghost:3.42
   -	Instalación de Ghost 5.22:  docker run -d -e url=http://localhost:3001 -p 3001:2369 --name ghost_5.22 ghost:5.22
 
 
