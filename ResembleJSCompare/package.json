@@ -1,0 +1,20 @@
+{
+  "name": "test",
+  "version": "1.0.0",
+  "description": "Resemble test example",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "keywords": [
+    "resemble"
+  ],
+  "author": "Haiber H. Galindo",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^5.2.2",
+    "jquery": "^3.6.1",
+    "playwright": "^1.27.1",
+    "resemblejs": "^4.1.0"
+  }
+}

@@ -11,11 +11,19 @@
 npm-debug.log
 yarn-error.log
 
+# node_modules
+/Cypress/node_modules
+/Kraken/node_modules
+/ResembleJSCompare/node_modules
+
 # Screenshots
-/cypress/screenshots
+/Cypress/cypress/screenshots/*
 
 # results
-/results/*
+/Kraken/reports/*
+/Cypress/cypress/results/*
+/ResembleJSCompare/results/*
+/ResembleJSCompare/images/*
 
 # IDEs and editors
 .idea/
